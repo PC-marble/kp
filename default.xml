@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Remotes -->
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" review="codelinaro.org"/>
+
+  <remote name="pc-marble" fetch="https://github.com/pc-marble"/>
+
+  <default remote="clo" revision="kernel.build.lnx.1.0" sync-j="8"/>
+
+  <!-- Repos -->
+  <project groups="qki" name="kernel/common" path="common" revision="ks-kernel.lnx.1.0.r1-rel" />
+  <project remote="pc-marble" name="msm-5.10" path="private/msm-5.10" revision="lineage-21" >
+    <linkfile dest="common/build.config.msm.waipio" src="build.config.msm.waipio" />
+    <linkfile dest="common/build.config.msm.waipio.tuivm" src="build.config.msm.waipio.tuivm" />
+    <linkfile dest="common/build.config.msm.lahaina" src="build.config.msm.lahaina" />
+    <linkfile dest="common/build.config.msm.marble" src="build.config.msm.marble" />
+    <linkfile dest="common/build.config.msm.marble.tuivm" src="build.config.msm.marble.tuivm" />
+  </project>
+
+  <!-- Devicetree -->
+  <project name="android_kernel_xiaomi_sm8450-devicetrees" path="private/msm-5.10/arch/arm64/boot/dts/vendor" remote="pc-marble" revision="lineage-21" />
+
+  <!-- Modules -->
+  <project name="android_kernel_xiaomi_sm8450-modules" path="private/modules" remote="pc-marble" revision="lineage-21" />
+
+  <!-- Tools -->
+  <project name="kernel/build" path="build" revision="kernel.lnx.5.10.r1-rel" />
+  <project name="kernel/prebuilts/build-tools" path="prebuilts/kernel-build-tools" revision="ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
+  <project name="kernel_platform/external/dtc" path="external/dtc" revision="kernel.build.lnx.1.0.r1-rel" />
+  <project name="kernel_platform/kernel/prebuilts/mainline/arm64" path="kernel/prebuilts/mainline/arm64" revision="kernel.lnx.5.10.r1-rel" />
+  <project name="kernel_platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
+  <project name="kernel_platform/system/tools/mkbootimg" path="tools/mkbootimg" revision="ks-kernel.lnx.1.0.r1-rel" />
+  <project name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="prebuilts-master/clang/host/linux-x86" revision="ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
+  <project name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="ks-kernel.lnx.1.0.r1-rel" clone-depth="1" />
+</manifest>
