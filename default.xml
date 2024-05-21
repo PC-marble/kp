@@ -18,10 +18,10 @@
   </project>
 
   <!-- Devicetree -->
-  <project name="android_kernel_xiaomi_sm8450-devicetrees" path="private/msm-5.10/arch/arm64/boot/dts/vendor" remote="pc-marble" revision="lineage-21" />
+  <project name="android_kernel_xiaomi_sm8450-devicetrees" path="private/sm8450-devicetrees" remote="pc-marble" revision="lineage-21" />
 
   <!-- Modules -->
-  <project name="android_kernel_xiaomi_sm8450-modules" path="private/modules" remote="pc-marble" revision="lineage-21" />
+  <project name="android_kernel_xiaomi_sm8450-modules" path="private/sm8450-modules" remote="pc-marble" revision="lineage-21" />
 
   <!-- Tools -->
   <project name="kernel/build" path="build" revision="kernel.lnx.5.10.r1-rel" />
